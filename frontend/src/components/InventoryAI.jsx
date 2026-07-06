@@ -21,7 +21,7 @@ function InventoryAI({ inventory }) {
   `${import.meta.env.VITE_API_URL}/api/ai/chat`,
   {
     inventory,
-    question,
+    prompt: question,
   }
 );
 
