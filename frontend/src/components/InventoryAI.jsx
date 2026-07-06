@@ -18,12 +18,12 @@ function InventoryAI({ inventory }) {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/ai/chat",
-        {
-          inventory,
-          question,
-        }
-      );
+  `${import.meta.env.VITE_API_URL}/api/ai/chat`,
+  {
+    inventory,
+    question,
+  }
+);
 
       setResponse(res.data.response);
     } catch (err) {
