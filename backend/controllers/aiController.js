@@ -2,6 +2,7 @@ const { askGemini } = require("../services/geminiService");
 
 const getAIResponse = async (req, res) => {
   try {
+    console.log("BODY RECEIVED:", req.body);
     const { prompt, inventory } = req.body;
 
     if (!prompt) {
