@@ -46,13 +46,14 @@ Keep the answer professional and well formatted.
       response,
     });
   } catch (err) {
-    console.error(err);
+  console.error("Gemini Error:", err);
 
-    res.status(500).json({
-      success: false,
-      message: "AI Error",
-    });
-  }
+  res.status(500).json({
+    success: false,
+    message: err.message,
+    error: err.toString(),
+  });
+}
 };
 
 module.exports = { getAIResponse };
