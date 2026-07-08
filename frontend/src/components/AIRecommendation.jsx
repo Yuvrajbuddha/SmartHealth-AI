@@ -17,7 +17,7 @@ function AIRecommendation() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/ai/chat",
+       `${import.meta.env.VITE_API_URL}/api/ai/chat`,
         {
           prompt:
             "Analyze this hospital inventory and provide professional recommendations.",
